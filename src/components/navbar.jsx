@@ -23,7 +23,9 @@ function Nav({ direction, ...args }) {
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
-            <Example />
+            <div>
+            <Example/>
+            </div>
         </nav>
 
     )

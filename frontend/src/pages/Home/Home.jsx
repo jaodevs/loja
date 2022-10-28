@@ -7,8 +7,11 @@ import "./Home.css"
     return(
         <div>
             <Example/>
+            <main>
 
-            
+                
+
+            </main>
         </div>
     ) 
     

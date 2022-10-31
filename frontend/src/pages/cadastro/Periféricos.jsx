@@ -28,7 +28,7 @@ function Perifericos(){
         
     })
 
-    const onSubmit = data => axios.post("http://localhost:3001/perifericos", data)
+    const onSub = data => axios.post("http://localhost:3001/perifericos", data)
 
 
 
@@ -39,7 +39,7 @@ function Perifericos(){
             
             <h1>Cadastro de Perifericos</h1>
             
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSub)}>
             <label>Nome do produto</label>
                 <input type="text" name="Nome do produto" {...register("Nomeproduto")}/>
                 <p className="error-message">{errors.Nomeproduto?.message}</p>
@@ -60,38 +60,38 @@ function Perifericos(){
                 <table>
                 <tr>
                     <th>Tamanho</th>
-                    <th><input type="text" name="Tamanho" {...register("Tamanho")}/><p className="error-message">{errors.Tamanho?.message}</p></th>
+                    <td><input type="text" name="Tamanho" {...register("Tamanho")}/><p className="error-message">{errors.Tamanho?.message}</p></td>
                 </tr>
                 <tr>
                     <th>Peso</th>
-                    <th><input type="text" name="Peso" {...register("Peso")}/> <p className="error-message">{errors.Peso?.message}</p></th>
+                    <td><input type="text" name="Peso" {...register("Peso")}/> <p className="error-message">{errors.Peso?.message}</p></td>
                 </tr>
                 <tr>
                     <th>Cor</th>
-                    <th><input type="text" name="Cor" {...register("Cor")}/><p className="error-message">{errors.Cor?.message}</p></th>
+                    <td><input type="text" name="Cor" {...register("Cor")}/><p className="error-message">{errors.Cor?.message}</p></td>
                 </tr>
                 <tr>
                 <th>plug and play</th>
-                <th><select type="text"{...register("Pnp")}>
+                <td><select type="text"{...register("Pnp")}>
                         <option value=""></option>
                         <option value="Sim">Sim</option>
                         <option value="Nao">Nao</option>
-                        </select><p className="error-message">{errors.Pnp?.message}</p></th>
+                        </select><p className="error-message">{errors.Pnp?.message}</p></td>
                 </tr>
                 <th>Tem RGB</th>
-                <th><select type="text"{...register("RGB")}>
+                <td><select type="text"{...register("RGB")}>
                         <option value=""></option>
                         <option value="Sim">Sim</option>
                         <option value="Nao">Nao</option>
-                        </select><p className="error-message">{errors.RGB?.message}</p></th>
+                        </select><p className="error-message">{errors.RGB?.message}</p></td>
                         
                 <tr>
                 <th>Tem bluetooth</th>
-                <th><select type="text"{...register("bluetooth")}>
+                <td><select type="text"{...register("bluetooth")}>
                         <option value=""></option>
                         <option value="Sim">Sim</option>
                         <option value="Nao">Nao</option>
-                        </select><p className="error-message">{errors.bluetooth?.message}</p></th>
+                        </select><p className="error-message">{errors.bluetooth?.message}</p></td>
                 </tr>
 
                 </table>

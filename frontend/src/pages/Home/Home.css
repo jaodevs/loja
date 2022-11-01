@@ -1,61 +1,54 @@
-.form1{
-    position: absolute;
-    width: 674px;
-    height: 816px;
-    left: 0px;
-    top: 214px;
- 
+.form1 {
+  position: absolute;
+  width: 674px;
+  height: 816px;
+  left: 0px;
+  top: 214px;
 }
-.form2{
-    position: absolute;
-    width: 674px;
-    height: 816px;
-    left: 674px;
-    top: 214px;
-    
-
+.form2 {
+  position: absolute;
+  width: 674px;
+  height: 816px;
+  left: 674px;
+  top: 214px;
 }
 
-.btn-delete button{
-    background-color: rgb(241, 45, 45);
+.btn-delete button {
+  background-color: rgb(241, 45, 45);
 }
-.btn-edit button{
-    background-color: #80D8FF;
+.btn-edit button {
+  background-color: #80d8ff;
 }
 .btns {
-    display: flex;
-    justify-content: space-between;
-    
+  display: flex;
+  justify-content: space-between;
 }
 
 .btns button {
-    color: rgba(255, 255, 255, 0.938);
-    font-size: 1.3rem;
-    border: 1;
-    border-radius: 20px;
-    font-family: Heebo;
-    font-weight: 700;
-    cursor: pointer;
-    padding: 5px 40px;
+  color: rgba(255, 255, 255, 0.938);
+  font-size: 1.3rem;
+  border: 1;
+  border-radius: 20px;
+  font-family: Heebo;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 5px 40px;
 }
-table{
-margin: auto;
-   
-
+table {
+  margin: auto;
 }
-td{
-text-align: center;
-
+td {
+  text-align: center;
 }
-
-
-
-.card1{
-    background-color: rgba(255, 255, 255, 0.473);
-    margin-bottom: 15px;
-    padding: 30px 40px;
-    
-
-
+.card1 {
+  background-color: rgba(255, 255, 255, 0.473);
+  margin-bottom: 15px;
+  padding: 30px 40px;
+  margin-top: 60px;
 }
-
+.card2 {
+  background-color: rgba(255, 255, 255, 0.473);
+  margin-bottom: 15px;
+  padding: 42px 40px;
+  margin-top: 60px;
+}

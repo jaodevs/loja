@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Dropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-} from 'reactstrap';
-import PropTypes from 'prop-types';
+} from "reactstrap";
+import PropTypes from "prop-types";
 
 function Example({ direction, ...args }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -15,17 +15,14 @@ function Example({ direction, ...args }) {
   return (
     <div className="d-flex p-5">
       <Dropdown isOpen={dropdownOpen} toggle={toggle} direction={direction}>
-        <DropdownToggle caret color="dark" >Cadastro</DropdownToggle>
+        <DropdownToggle caret color="dark">
+          Cadastro
+        </DropdownToggle>
 
         <DropdownMenu dark>
-        
-          <DropdownItem   href="/eletronicos"  >Eletrônicos</DropdownItem>
+          <DropdownItem href="/eletronicos">Eletrônicos</DropdownItem>
 
-          <DropdownItem  href="/perifericos">Periféricos</DropdownItem>
-
-
-
-
+          <DropdownItem href="/perifericos">Periféricos</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     </div>

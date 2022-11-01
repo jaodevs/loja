@@ -1,10 +1,10 @@
-import "./Cadastro.css";
+import axios, { Axios } from "axios";
 import Nav2 from "../../components/Navbar2";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import axios, { Axios } from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const validation = yup.object().shape({
   Nomeproduto: yup.string().required("Nome do produto é obrigatório"),
@@ -17,24 +17,33 @@ const validation = yup.object().shape({
   bluetooth: yup.string().required("Campo obrigatório"),
 });
 
-function Perifericos() {
-let navigate = useNavigate();
+function Perifericosedit() {
+  const { id } = useParams();
+
+  let navigate = useNavigate();
+
+  const onSub = (data) =>
+    axios
+      .patch(`http://localhost:3001/perifericos/${id}`, data)
+      .then(() => {
+        navigate("/");
+      })
+      .catch(() => {});
 
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: yupResolver(validation),
   });
 
-  const onSub = (data) => 
-  axios
-  .post("http://localhost:3001/perifericos", data)
-   .then(() => {
-    navigate("/");
-  })
-  .catch(() => {});
+  useEffect(() => {
+    axios.get(`http://localhost:3001/perifericos/${id}`).then((response) => {
+      reset(response.data);
+    });
+  }, []);
 
   return (
     <div>
@@ -125,4 +134,4 @@ let navigate = useNavigate();
   );
 }
 
-export default Perifericos;
+export default Perifericosedit;

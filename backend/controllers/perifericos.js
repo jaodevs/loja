@@ -1,87 +1,81 @@
-const Perifericos = require("../models/Perifericos")
+const Perifericos = require("../models/Perifericos");
 
-
-
-
-const controller = {} // Objeto vazio
+const controller = {}; // Objeto vazio
 
 controller.create = async (req, res) => {
   try {
-    await Perifericos.create(req.body)
+    await Perifericos.create(req.body);
     // HTTP 201: Created
-    res.status(201).end()
+    res.status(201).end();
   } catch (error) {
-    console.error(error)
+    console.error(error);
     // HTTP 500: Internal Server Error
-    res.status(500).send(error)
+    res.status(500).send(error);
   }
-}
+};
 
 controller.retrieveAll = async (req, res) => {
   try {
     // find() sem parâmetros retorna todos os documentos da coleção
-    const result = await Perifericos.find().sort({order: 1})
+    const result = await Perifericos.find().sort({ order: 1 });
     // HTTP 200: OK (implícito)
-    res.send(result)
+    res.send(result);
   } catch (error) {
-    console.error(error)
+    console.error(error);
     // HTTP 500: Internal Server Error
-    res.status(500).send(error)
+    res.status(500).send(error);
   }
-}
+};
 
 controller.retrieveOne = async (req, res) => {
   try {
-    const result = await Perifericos.findById(req.params.id)
+    const result = await Perifericos.findById(req.params.id);
 
     // HTTP 200: OK (implícito)
     if (result) {
       // Encontrou o documento
-      res.send(result)
+      res.send(result);
     } else {
-      res.status(404).end() // Não encontrou
+      res.status(404).end(); // Não encontrou
     }
   } catch (error) {
-    console.error(error)
+    console.error(error);
     // HTTP 500: Internal Server Error
-    res.status(500).send(error)
+    res.status(500).send(error);
   }
-}
+};
 
 controller.update = async (req, res) => {
   try {
-    const result = await Perifericos.findByIdAndUpdate(req.params.id, req.body)
+    const result = await Perifericos.findByIdAndUpdate(req.params.id, req.body);
 
     // HTTP 204: No content
     if (result) {
-      return res.status(204).end() // Encontrou e atualizou
+      return res.status(204).end(); // Encontrou e atualizou
     } else {
-      res.status(404).end() // Não encontrou
+      res.status(404).end(); // Não encontrou
     }
   } catch (error) {
-    console.error(error)
+    console.error(error);
     // HTTP 500: Internal Server Error
-    res.status(500).send(error)
+    res.status(500).send(error);
   }
-}
+};
 
 controller.delete = async (req, res) => {
   try {
-    const result = await Perifericos.findByIdAndDelete(req.params.id)
+    const result = await Perifericos.findByIdAndDelete(req.params.id);
 
     if (result) {
-      res.status(204).end() // Encontrou e excluiu
+      res.status(204).end(); // Encontrou e excluiu
     } else {
-      res.status(404).end // Não encontrou
+      res.status(404).end; // Não encontrou
     }
   } catch (error) {
-    console.error(error)
+    console.error(error);
     // HTTP 500: Internal Server Error
-    res.status(500).send(error)
+    res.status(500).send(error);
   }
-}
+};
 
-
-
-
-module.exports = controller
+module.exports = controller;

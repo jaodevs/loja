@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 function Home() {
   const [onSubmit, setonSubmit] = useState([]);
 
+
   useEffect(() => {
     axios
       .get("http://localhost:3001/eletronicos")
@@ -25,6 +26,10 @@ function Home() {
 
     setonSubmit(onSubmit.filter((onSubmit) => onSubmit._id !== id));
   }
+  
+
+
+
 
   /***************************************************************************************/
   const [onSub, setonSub] = useState([]);
@@ -73,8 +78,12 @@ function Home() {
 
   return (
     <div>
+    
       <Example />
+      
+      
       <div>
+    
         <h1>Produtos</h1>
       </div>
 

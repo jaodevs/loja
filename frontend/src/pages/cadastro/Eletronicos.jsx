@@ -33,7 +33,7 @@ function Eletronicos() {
 
   const onSubmit = (data) =>
     axios
-      .post("http://localhost:3001/eletronicos", data)
+      .post("http://localhost:3001/eletronicos",data)
       .then(() => {
         navigate("/");
       })

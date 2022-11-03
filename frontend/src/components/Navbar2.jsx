@@ -20,6 +20,9 @@ function Nav2({ direction, ...args }) {
                     aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
+                <div>
+                    
+                </div>
             </div>
         </nav>
 

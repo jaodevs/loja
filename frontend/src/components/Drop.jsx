@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+
+
+
+
 import {
   Dropdown,
   DropdownToggle,
@@ -13,6 +17,8 @@ function Example({ direction, ...args }) {
   const toggle = () => setDropdownOpen((prevState) => !prevState);
 
   return (
+      
+
     <div className="d-flex p-5">
       <Dropdown isOpen={dropdownOpen} toggle={toggle} direction={direction}>
         <DropdownToggle caret color="dark">
@@ -25,7 +31,9 @@ function Example({ direction, ...args }) {
           <DropdownItem href="/perifericos">Periféricos</DropdownItem>
         </DropdownMenu>
       </Dropdown>
+
     </div>
+    
   );
 }
 

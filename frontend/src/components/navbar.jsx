@@ -2,7 +2,8 @@ import Logo from "../imgs/Logo.png";
 import "bootstrap/dist/css/bootstrap.css";
 import Example from "./Drop";
 import { Link } from "react-router-dom";
-import "./nav.css"
+
+import Search from "./search/Search";
 
 
 
@@ -32,6 +33,10 @@ function Nav({ direction, ...args }) {
         >
           <i class="fas fa-bars"></i>
         </button>
+        <div>
+          <Search/>
+          
+        </div>
 
     
 
